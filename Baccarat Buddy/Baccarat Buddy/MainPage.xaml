@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Roulete_IRS"
+             x:Class="Baccarat_Buddy.MainPage">
+    <AbsoluteLayout>
+        <StackLayout AbsoluteLayout.LayoutBounds = "0,0,1,1" AbsoluteLayout.LayoutFlags = "All">
+            <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Label Text="Baccarat Buddy"
+                           x:Name="Title"
+                           Margin="20,20,20,20"
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           HorizontalOptions="Center" />
+
+                    <Label Margin="20,20,20,20"
+                           FontSize="Medium">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Instructions: "
+                                      FontAttributes="Bold" />
+                                <Span Text="Enter your starting unit, and record the outcome of the last hand. Your next bet will be displayed accordingly." />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <Grid Margin="10,5,10,5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.5*" />
+                            <ColumnDefinition Width="0.5*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50" />
+                        </Grid.RowDefinitions>
+                        <Label Text="Starting Unit"
+                               VerticalTextAlignment="Center"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="End"/>
+                        <Picker Grid.Column="1"
+                                Title="Select Unit"
+                                x:Name="StartingUnitPicker"
+                                HorizontalOptions="Start"
+                                SelectedIndexChanged="StartingUnitSelected" />
+                    </Grid>
+
+                    <Label Text="Outcome of Last Hand" 
+                           x:Name="OutcomeLabel"
+                           Margin="20,5,20,20"
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           HorizontalOptions="Center" />
+
+                    <Grid Margin="10,5,10,5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.5*" />
+                            <ColumnDefinition Width="0.5*" />
+                            <ColumnDefinition Width="0.5*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100" />
+                        </Grid.RowDefinitions>
+                        <Button Text="Player"
+                                x:Name="PlayerBtn"
+                                BackgroundColor="Blue"
+                                TextColor="White"
+                                WidthRequest="150"
+                                CornerRadius="5"
+                                HorizontalOptions="Center"
+                                Clicked="PlayerButtonClicked"/>
+                        <Button Grid.Column="1"
+                                Text="Tie"
+                                x:Name="TieBtn"
+                                BackgroundColor="Green"
+                                WidthRequest="150"
+                                CornerRadius="5"
+                                HorizontalOptions="Center"
+                                Clicked="TieButtonClicked"/>
+                        <Button Grid.Column="2"
+                                Text="Banker"
+                                x:Name="BankerBtn"
+                                BackgroundColor="Red"
+                                WidthRequest="150"
+                                CornerRadius="5"
+                                HorizontalOptions="Center"
+                                Clicked="BankerButtonClicked"/>
+                    </Grid>
+
+                    <Grid Margin="20,5,20,0"
+                          x:Name="SessionInfoGrid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.5*" />
+                            <ColumnDefinition Width="0.5*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Label Text="Session Bankroll:"
+                               VerticalTextAlignment="Center"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="End"/>
+                        <Label Grid.Column="1"
+                               x:Name="BankrollLabel"
+                               Text="$0.00"
+                               VerticalTextAlignment="Center"
+                               HorizontalTextAlignment="Center"/>
+                        <Label Grid.Row="1"
+                               Grid.Column="0"
+                               Text="Shoe Hand Number:"
+                               VerticalTextAlignment="Center"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="End"/>
+                        <Label Grid.Row="1"
+                               Grid.Column="1"
+                               x:Name="HandNumberLabel"
+                               Text="1"
+                               VerticalTextAlignment="Center"
+                               HorizontalTextAlignment="Center"/>
+                    </Grid>
+
+                    <Label Text="Next Bet" 
+                           x:Name="NextBetHeaderLabel"
+                           Margin="20,20,20,20"
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           HorizontalOptions="Center" />
+                    <Label Text="Ignore Next Hand" 
+                           x:Name="NextBetLabel"
+                           Margin="20,20,20,20"
+                           FontAttributes="Bold"
+                           FontSize="Large"
+                           HorizontalOptions="Center" />
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentPage>

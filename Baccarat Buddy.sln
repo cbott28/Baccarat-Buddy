@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1433
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Baccarat Buddy.Android", "Baccarat Buddy\Baccarat Buddy.Android\Baccarat Buddy.Android.csproj", "{63F0865A-0905-499E-90B6-4EFF459F907C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Baccarat Buddy", "Baccarat Buddy\Baccarat Buddy\Baccarat Buddy.csproj", "{BEEA8B1E-559C-4D73-A56E-E6FF22D857F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63F0865A-0905-499E-90B6-4EFF459F907C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63F0865A-0905-499E-90B6-4EFF459F907C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63F0865A-0905-499E-90B6-4EFF459F907C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{63F0865A-0905-499E-90B6-4EFF459F907C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63F0865A-0905-499E-90B6-4EFF459F907C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63F0865A-0905-499E-90B6-4EFF459F907C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{BEEA8B1E-559C-4D73-A56E-E6FF22D857F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEEA8B1E-559C-4D73-A56E-E6FF22D857F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEEA8B1E-559C-4D73-A56E-E6FF22D857F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEEA8B1E-559C-4D73-A56E-E6FF22D857F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B59B78AB-8BC4-4372-8871-7A6DD73A0E83}
+	EndGlobalSection
+EndGlobal
