@@ -106,7 +106,7 @@
                                HorizontalTextAlignment="Center"/>
                         <Label Grid.Row="1"
                                Grid.Column="0"
-                               Text="Shoe Hand Number:"
+                               Text="Hand Number:"
                                VerticalTextAlignment="Center"
                                FontAttributes="Bold"
                                HorizontalTextAlignment="End"/>

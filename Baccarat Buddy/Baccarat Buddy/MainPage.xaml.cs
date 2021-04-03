@@ -99,7 +99,9 @@ namespace Baccarat_Buddy
                 updateShoeBankroll(result);
                 _sessionBankroll += (result == Result.Win) ? _shoe.LastBetAmount : _shoe.LastBetAmount * -1;
 
-                if (result == Result.Loss && _shoe.LastBetAmount >= _shoe.HighestBetAmountLost)
+                if (result == Result.Loss &&
+                    _shoe.LastBetAmount >= _shoe.HighestBetAmountLost &&
+                    !_shoe.IsInContinuationPattern)
                     _shoe.HighestBetAmountLost = _shoe.LastBetAmount;
                 else if (result == Result.Win &&
                     _shoe.HighestBetAmountLost > _startingBet &&
@@ -217,7 +219,7 @@ namespace Baccarat_Buddy
             if (_shoe.Hands.Count == 2)
             {
                 if (_shoe.HighestBetAmountLost == 0m ||
-                    _shoe.HighestBetAmountLost == _startingBet)
+                    _shoe.HighestBetAmountLost <= _startingBet)
                     return _startingBet;
 
                 return _shoe.HighestBetAmountLost + _unit;

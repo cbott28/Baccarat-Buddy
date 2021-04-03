@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="2" android:versionName="1.1" package="com.companyname.Baccarat_Buddy.Android" android:installLocation="preferExternal">
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="27" />
-	<application android:label="Baccarat_Buddy.Android"></application>
+	<application android:label="Baccarat_Buddy.Android" android:icon="@drawable/ic_launcher"></application>
 </manifest>
