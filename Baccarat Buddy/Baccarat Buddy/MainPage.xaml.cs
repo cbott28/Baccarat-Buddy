@@ -46,7 +46,7 @@ namespace Baccarat_Buddy
 
         async void PlayerButtonClicked(object sender, EventArgs e)
         {
-            bool hasConfirmation = await DisplayAlert("Confirmation", "You've chosen Player as the last outcome.", "Continue", "Cancel");
+            bool hasConfirmation = await DisplayAlert("Confirmation", "You've chosen PLAYER as the last outcome.", "Continue", "Cancel");
 
             if (hasConfirmation)
             {
@@ -58,7 +58,7 @@ namespace Baccarat_Buddy
 
         async void TieButtonClicked(object sender, EventArgs e)
         {
-            bool hasConfirmation = await DisplayAlert("Confirmation", "You've chosen Tie as the last outcome.", "Continue", "Cancel");
+            bool hasConfirmation = await DisplayAlert("Confirmation", "You've chosen TIE as the last outcome.", "Continue", "Cancel");
 
             if (hasConfirmation)
             {
@@ -70,7 +70,7 @@ namespace Baccarat_Buddy
 
         async void BankerButtonClicked(object sender, EventArgs e)
         {
-            bool hasConfirmation = await DisplayAlert("Confirmation", "You've chosen Banker as the last outcome.", "Continue", "Cancel");
+            bool hasConfirmation = await DisplayAlert("Confirmation", "You've chosen BANKER as the last outcome.", "Continue", "Cancel");
 
             if (hasConfirmation)
             {
