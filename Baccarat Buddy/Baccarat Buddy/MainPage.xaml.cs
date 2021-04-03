@@ -44,25 +44,40 @@ namespace Baccarat_Buddy
             BankerBtn.IsEnabled = true;
         }
 
-        void PlayerButtonClicked(object sender, EventArgs e)
+        async void PlayerButtonClicked(object sender, EventArgs e)
         {
-            initializeView();
-            updateShoe(Outcome.Player);
-            updateDisplay();
+            bool hasConfirmation = await DisplayAlert("Confirmation", "You've chosen Player as the last outcome.", "Continue", "Cancel");
+
+            if (hasConfirmation)
+            {
+                initializeView();
+                updateShoe(Outcome.Player);
+                updateDisplay();
+            }
         }
 
-        void TieButtonClicked(object sender, EventArgs e)
+        async void TieButtonClicked(object sender, EventArgs e)
         {
-            initializeView();
-            updateShoe(Outcome.Tie);
-            updateDisplay();
+            bool hasConfirmation = await DisplayAlert("Confirmation", "You've chosen Tie as the last outcome.", "Continue", "Cancel");
+
+            if (hasConfirmation)
+            {
+                initializeView();
+                updateShoe(Outcome.Tie);
+                updateDisplay();
+            }
         }
 
-        void BankerButtonClicked(object sender, EventArgs e)
+        async void BankerButtonClicked(object sender, EventArgs e)
         {
-            initializeView();
-            updateShoe(Outcome.Banker);
-            updateDisplay();
+            bool hasConfirmation = await DisplayAlert("Confirmation", "You've chosen Banker as the last outcome.", "Continue", "Cancel");
+
+            if (hasConfirmation)
+            {
+                initializeView();
+                updateShoe(Outcome.Banker);
+                updateDisplay();
+            }
         }
 
         private void initializeView()
