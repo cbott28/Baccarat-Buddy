@@ -135,7 +135,8 @@ namespace Baccarat_Buddy
                     _shoe = new Shoe();
                 }
                 else if ((_shoe.IsInContinuationPattern && result == Result.Loss) ||
-                         (_shoe.IsInLossRecoveryPattern && _shoe.Hands.Count() >= 5 && result == Result.Loss))
+                         (_shoe.IsInLossRecoveryPattern && _shoe.Hands.Count() >= 5 && result == Result.Loss) ||
+                         (_shoe.Hands.Count() == 4 && result == Result.Win && !_shoe.IsInContinuationPattern))
                 {
                     _shoe.Hands.Clear();
                     _shoe.Hands.Add(outcome);
