@@ -127,13 +127,17 @@ namespace Baccarat_Buddy
                 _shoe.LastResult = result;
 
                 if (_shoe.Hands.Count() >= 4 && _shoe.Bankroll > _startingBet &&
-                    !_shoe.IsInContinuationPattern)
+                    !_shoe.IsInContinuationPattern && _shoe.HighestBetAmountLost <= _startingBet)
                     _shoe = new Shoe();
-                else if (_shoe.Hands.Count() == 4 && result == Result.Win && 
-                         !_shoe.IsInContinuationPattern && _shoe.Bankroll > 0m)
+                else if (_shoe.Hands.Count() == 4 && result == Result.Win &&
+                         !_shoe.IsInContinuationPattern && _shoe.Bankroll > 0m &&
+                         _shoe.HighestBetAmountLost <= _startingBet)
                 {
                     _shoe = new Shoe();
                 }
+                else if (_shoe.IsInContinuationPattern && result == Result.Loss &&
+                         _shoe.Bankroll >= _startingBet && _shoe.HighestBetAmountLost <= _startingBet)
+                    _shoe = new Shoe();
                 else if ((_shoe.IsInContinuationPattern && result == Result.Loss) ||
                          (_shoe.IsInLossRecoveryPattern && _shoe.Hands.Count() >= 5 && result == Result.Loss) ||
                          (_shoe.Hands.Count() == 4 && result == Result.Win && !_shoe.IsInContinuationPattern))
